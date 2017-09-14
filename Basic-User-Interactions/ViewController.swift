@@ -10,11 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    
+    @IBOutlet weak var outputLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+         outputLabel.text! = "Click Button"
     }
-
+    
+    @IBAction func buttonAction(sender: UIButton) {
+        if(sender.titleLabel!.text! == "Left")  {
+            outputLabel.text = "Left button clicked"
+        }
+        else    {
+            outputLabel.text = "Right button clicked"
+        }
+        
+       
+    }
 
 }
 
