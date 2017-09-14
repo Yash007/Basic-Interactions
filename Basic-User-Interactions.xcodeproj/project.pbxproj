@@ -297,6 +297,7 @@
 				4186D82C1F6A04880078B76D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
