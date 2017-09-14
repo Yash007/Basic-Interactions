@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -23,36 +24,73 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="179" y="82" width="42" height="21"/>
-                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boZ-o4-3Xn">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="ViH-hh-bow"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Left"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="270" width="60" height="60"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ViH-hh-bow"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="ViH-hh-bow"/>
+                                    </mask>
                                 </variation>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfI-jQ-hdZ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="U3X-kV-tl3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Right"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="320" y="270" width="60" height="60"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="U3X-kV-tl3"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="U3X-kV-tl3"/>
+                                    </mask>
                                 </variation>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tfI-jQ-hdZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4nC-VP-Xlk"/>
+                            <constraint firstItem="rmo-sk-aAE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="62" id="Fb5-JB-u9s"/>
+                            <constraint firstItem="boZ-o4-3Xn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="250" id="Hve-jA-nZB"/>
+                            <constraint firstItem="tfI-jQ-hdZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KDk-yV-qly"/>
+                            <constraint firstItem="rmo-sk-aAE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Req-XN-jpn"/>
+                            <constraint firstItem="tfI-jQ-hdZ" firstAttribute="top" secondItem="boZ-o4-3Xn" secondAttribute="top" id="Uqm-ne-2IV"/>
+                            <constraint firstItem="boZ-o4-3Xn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mwO-2a-jPY"/>
+                            <constraint firstItem="tfI-jQ-hdZ" firstAttribute="bottom" secondItem="boZ-o4-3Xn" secondAttribute="bottom" id="vtX-1l-HTj"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="rmo-sk-aAE"/>
                                 <exclude reference="boZ-o4-3Xn"/>
                                 <exclude reference="tfI-jQ-hdZ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Fb5-JB-u9s"/>
+                                <exclude reference="Req-XN-jpn"/>
+                                <exclude reference="Hve-jA-nZB"/>
+                                <exclude reference="mwO-2a-jPY"/>
+                                <exclude reference="4nC-VP-Xlk"/>
+                                <exclude reference="KDk-yV-qly"/>
+                                <exclude reference="Uqm-ne-2IV"/>
+                                <exclude reference="vtX-1l-HTj"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -60,6 +98,16 @@
                                 <include reference="rmo-sk-aAE"/>
                                 <include reference="boZ-o4-3Xn"/>
                                 <include reference="tfI-jQ-hdZ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Fb5-JB-u9s"/>
+                                <include reference="Req-XN-jpn"/>
+                                <include reference="Hve-jA-nZB"/>
+                                <include reference="mwO-2a-jPY"/>
+                                <include reference="4nC-VP-Xlk"/>
+                                <include reference="KDk-yV-qly"/>
+                                <include reference="Uqm-ne-2IV"/>
+                                <include reference="vtX-1l-HTj"/>
                             </mask>
                         </variation>
                     </view>
